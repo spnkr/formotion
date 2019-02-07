@@ -151,6 +151,7 @@ module Formotion
       # if input_accessory property is set on row.
       # :done is currently the only supported option.
       def input_accessory_view(input_accessory)
+        input_accessory = input_accessory.to_sym
         case input_accessory
         when :done
           @input_accessory ||= begin
